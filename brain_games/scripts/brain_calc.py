@@ -1,5 +1,5 @@
 import brain_games.engine_game
-from brain_games.games.even import questions, right_answer, rules
+from brain_games.games.calc import questions, right_answer, rules
 
 
 def main():
