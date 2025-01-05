@@ -15,5 +15,5 @@ reinstall-package:
 		uv tool install --upgrade dist/*.whl
 
 lint:
-		uv run ruff check brain_games
+		uv run ruff check --fix brain_games
 		

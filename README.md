@@ -4,3 +4,5 @@
 <a href="https://asciinema.org/a/9Skt2FbW7LSCkBky9LgDa7NLe" target="_blank"><img src="https://asciinema.org/a/9Skt2FbW7LSCkBky9LgDa7NLe.svg" /></a>
 
 <a href="https://asciinema.org/a/697024" target="_blank"><img src="https://asciinema.org/a/697024.svg" /></a>
+A demonstration. The game is to find the greatest common divisor.
+<a href="https://asciinema.org/a/697048" target="_blank"><img src="https://asciinema.org/a/697048.svg" /></a>
