@@ -14,7 +14,7 @@ rules = "Find the greatest common divisor of given numbers."
 questions = []
 right_answer = []
 for _ in range(3):
-    num1 = randint(1, 1000)
-    num2 = randint(1, 1000)
+    num1 = randint(1, 10)
+    num2 = randint(1, 10)
     questions.append(f"{num1} {num2}")
     right_answer.append(str(nod(num1, num2)))
