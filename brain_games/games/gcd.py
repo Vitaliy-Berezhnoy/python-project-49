@@ -1,13 +1,13 @@
 from random import randint
 
 
-def nod(a, b):       # нахождение наибольшего общего делителя
-    while a != 0 and b != 0:
-        if a > b:
-            a = a % b
+def nod(num1, num2):       # нахождение наибольшего общего делителя
+    while num1 != 0 and num2 != 0:
+        if num1 > num2:
+            num1 = num1 % num2
         else:
-            b = b % a
-    return (a + b)
+            num2 = num2 % num1
+    return (num1 + num2)
 
 
 rules = "Find the greatest common divisor of given numbers."
