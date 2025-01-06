@@ -6,3 +6,6 @@
 <a href="https://asciinema.org/a/697024" target="_blank"><img src="https://asciinema.org/a/697024.svg" /></a>
 A demonstration. The game is to find the greatest common divisor.
 <a href="https://asciinema.org/a/697048" target="_blank"><img src="https://asciinema.org/a/697048.svg" /></a>
+
+Demonstration of the arithmetic progression game
+<a href="https://asciinema.org/a/697128" target="_blank"><img src="https://asciinema.org/a/697128.svg" /></a>
