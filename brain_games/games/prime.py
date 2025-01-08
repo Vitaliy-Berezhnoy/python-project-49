@@ -13,7 +13,7 @@ def is_prime(number):
     return True
 
 
-rules = '"yes" if given number is prime. Otherwise answer "no".'
+rules = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 questions = []
 right_answer = []
 for _ in range(3):
