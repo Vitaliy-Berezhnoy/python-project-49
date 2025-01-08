@@ -16,4 +16,8 @@ reinstall-package:
 
 lint:
 		uv run ruff check --fix brain_games
-		
+
+users-install:
+		uv sync	--no-dev
+		uv build
+		uv tool install dist/*.whl
