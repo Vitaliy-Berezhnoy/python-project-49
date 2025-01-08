@@ -1,13 +1,7 @@
 [project]
-name = "Mind-games"
+name = "hexlet-code"
 version = "0.1.0"
-authors = [
-  {name = "Vitaliy Berezhnoy", email = "ipbvv@mail.ru"},
-]
-maintainers = [
-  {name = "Vitaly Vorobyov"}
-]
-description = "Five console games"
+description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
