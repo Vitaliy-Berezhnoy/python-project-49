@@ -1,17 +1,22 @@
 from random import choice, randint
 
-rules = "What is the result of the expression?"
-questions = []
-right_answer = []
-for _ in range(3):
-    num1 = randint(1, 25)
-    num2 = randint(1, 25)
+
+def displays_rules_game():
+    print("What is the result of the expression?")
+
+
+def generating_question_and_answer():
+    MIN_GEN_RANGE = 1
+    MAX_GEN_RANGE = 25
+    num1 = randint(MIN_GEN_RANGE, MAX_GEN_RANGE)
+    num2 = randint(MIN_GEN_RANGE, MAX_GEN_RANGE)
     operation = choice('+-*')
-    questions.append(f"{str(num1)} {operation} {str(num2)}")
+    question = f"{str(num1)} {operation} {str(num2)}"
     match operation:
         case "+":
-            right_answer.append(str(num1 + num2))
+            answer = str(num1 + num2)
         case "-":
-            right_answer.append(str(num1 - num2))
+            answer = str(num1 - num2)
         case "*":
-            right_answer.append(str(num1 * num2))
+            answer = str(num1 * num2)
+    return ((question, answer))

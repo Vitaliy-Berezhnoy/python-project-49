@@ -2,8 +2,8 @@ from random import randint
 
 
 # функция проверяет является ли число простым
-# если число простое -> False 
-# если нет -> True
+# если число простое -> True 
+# если нет -> False
 def is_prime(number):
     if number <= 1: 
         return False
@@ -13,13 +13,17 @@ def is_prime(number):
     return True
 
 
-rules = 'Answer "yes" if given number is prime. Otherwise answer "no".'
-questions = []
-right_answer = []
-for _ in range(3):
-    number = randint(1, 100)
-    questions.append(number)
+def displays_rules_game():
+    print('Answer "yes" if given number is prime. Otherwise answer "no".')
+
+
+def generating_question_and_answer():
+    MIN_GEN_RANGE = 1
+    MAX_GEN_RANGE = 130
+    number = randint(MIN_GEN_RANGE, MAX_GEN_RANGE)
+    question = str(number)
     if is_prime(number):
-        right_answer.append('yes')
+        answer = 'yes'
     else:
-        right_answer.append('no')
+        answer = 'no'
+    return ((question, answer))

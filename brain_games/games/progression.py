@@ -1,23 +1,37 @@
 from random import randint
 
 
-def progress(first, step, empty):    # создает арифметическую прогрессию
-    temp = ''
+# функция создает арифметическую прогрессию
+def generating_a_progression(first: int, step: int, empty: int) -> str:
+    question = ''
     for i in range(1, 11):
         if i == empty:
-            temp += '.. '
+            question += '.. '
         else:
-            temp += str(first + step * (i - 1)) + ' '
-    temp = temp.strip()
-    return (temp)
+            question += str(first + step * (i - 1)) + ' '
+    question = question.strip()
+    return (question)
 
 
-rules = "What number is missing in the progression?"
-questions = []
-right_answer = []
-for _ in range(3):
-    first = randint(2, 50)
-    step = randint(2, 20)
-    empty = randint(1, 10)
-    right_answer.append(str(first + step * (empty - 1)))
-    questions.append(progress(first, step, empty))    
+def displays_rules_game():
+    print("What number is missing in the progression?")
+
+
+def generating_question_and_answer():
+    LEN_PROGRESSION = 10
+    MIN_GEN_RANGE = 1
+    MAX_GEN_RANGE = 50
+    #
+    first_element = randint(MIN_GEN_RANGE, MAX_GEN_RANGE)
+    step = randint(MIN_GEN_RANGE, MAX_GEN_RANGE)
+    index_of_missing_element = randint(MIN_GEN_RANGE, LEN_PROGRESSION)
+    #
+    answer = str(first_element + step * (index_of_missing_element - 1))
+    question = ''
+    for i in range(LEN_PROGRESSION):
+        if i + 1 == index_of_missing_element:
+            question += '.. '
+        else:
+            question += str(first_element + step * i) + ' '
+    question = question.strip()
+    return ((question, answer))

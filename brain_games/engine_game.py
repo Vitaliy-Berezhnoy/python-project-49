@@ -1,24 +1,21 @@
 import prompt
 
 
-def engine(rule: str, questions: list, right_answer: list):
+def run_game(displays_rules_game, generating_question_and_answer):
+    NUMBER_QUESTIONS = 3
     print('Welcome to the Brain Games!')
     name = prompt.string('May I have your name? ')
     print(f'Hello, {name}!')
-    print(rule)
-    num_questions = len(questions)
-    num_errors = 0
-    while num_questions > 0:
-        print(f"Question: {questions[num_questions - 1]}")
+    displays_rules_game()
+    for _ in range(NUMBER_QUESTIONS):
+        question, right_answer = generating_question_and_answer()
+        print(f"Question: {question}")
         response_user = prompt.string('Your answer: ')
-        if response_user == right_answer[num_questions - 1]:
+        if response_user == right_answer:
             print('Correct!')
-            num_questions -= 1
         else:
             print(f"'{response_user}' is wrong answer ;(. ", end='')
-            print(f"Correct answer was '{right_answer[num_questions - 1]}'.")
+            print(f"Correct answer was '{right_answer}'.")
             print(f"Let's try again, {name}!")
-            num_questions = 0
-            num_errors = 1
-    if num_errors == 0:
-        print(f"Congratulations, {name}!")
+            return
+    print(f"Congratulations, {name}!")

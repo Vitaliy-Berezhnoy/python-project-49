@@ -1,12 +1,17 @@
 from random import randint
 
-rules = 'Answer "yes" if the number is even, otherwise answer "no".'
-questions = []
-right_answer = []
-for _ in range(3):
-    number = randint(1, 100)
-    questions.append(number)
+
+def displays_rules_game():
+    print('Answer "yes" if the number is even, otherwise answer "no".')
+
+
+def generating_question_and_answer():
+    MIN_GEN_RANGE = 1
+    MAX_GEN_RANGE = 100
+    number = randint(MIN_GEN_RANGE, MAX_GEN_RANGE)
+    question = str(number)
     if number % 2 == 0:
-        right_answer.append('yes')
+        answer = 'yes'
     else:
-        right_answer.append('no')
+        answer = 'no'
+    return ((question, answer))
