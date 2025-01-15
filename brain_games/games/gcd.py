@@ -1,5 +1,9 @@
 from random import randint
 
+MIN_GEN_RANGE = 2
+MAX_GEN_RANGE = 10
+RULES_GAME = "Find the greatest common divisor of given numbers."
+
 
 def finding_gcd(num1, num2):       # нахождение наибольшего общего делителя
     while num1 != 0 and num2 != 0:
@@ -10,13 +14,7 @@ def finding_gcd(num1, num2):       # нахождение наибольшего
     return (num1 + num2)
 
 
-def displays_rules_game():
-    print("Find the greatest common divisor of given numbers.")
-
-
 def generating_question_and_answer():
-    MIN_GEN_RANGE = 2
-    MAX_GEN_RANGE = 10
     num1 = randint(MIN_GEN_RANGE, MAX_GEN_RANGE)
     num2 = randint(MIN_GEN_RANGE, MAX_GEN_RANGE)
     question = f"{num1} {num2}"
